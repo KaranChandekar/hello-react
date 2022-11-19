@@ -33,6 +33,9 @@ function AddEmployee(props) {
           <form
             onSubmit={(e) => {
               e.preventDefault();
+              setName("");
+              setRole("");
+              setImg("");
               props.newEmployee(name, role, img);
             }}
             id="editmodal"
