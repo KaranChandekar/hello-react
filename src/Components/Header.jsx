@@ -4,10 +4,10 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router-dom";
 
 const navigation = [
-  { name: "Employees", href: "/Employees" },
-  { name: "Customers", href: "/Customers" },
-  { name: "Dictionary", href: "/Dictionary" },
-  { name: "Calendar", href: "/other1" },
+  { name: "Employees", href: "/employees" },
+  { name: "Dictionary", href: "/dictionary" },
+  { name: "Definition", href: "/definition" },
+  { name: "Customers", href: "/customers" },
 ];
 
 function classNames(...classes) {
