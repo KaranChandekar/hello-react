@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
+import DefinitionSearch from "../Components/DefinitionSearch";
 import NotFound from "../Components/NotFound";
 
 const Definition = () => {
@@ -40,9 +41,7 @@ const Definition = () => {
         <Link to="/dictionary">Search another</Link>
       </div>
     );
-  }
-
-  if (error === true) {
+  } else if (error === true) {
     return (
       <div>
         <p>Something went wrong! Try again.</p>
@@ -50,6 +49,7 @@ const Definition = () => {
       </div>
     );
   }
+
   return (
     <div>
       {word ? (
@@ -63,6 +63,8 @@ const Definition = () => {
               </p>
             );
           })}
+          <p>Search again:</p>
+          <DefinitionSearch />
         </div>
       ) : (
         <p>Loading...</p>
